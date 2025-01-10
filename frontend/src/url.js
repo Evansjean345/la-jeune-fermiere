@@ -2,7 +2,7 @@
 // const baseUrl = "http://localhost:3000";
 
 /*production*/
-const baseUrl = "https://backend-la-jeune-fermiere-bdb33bb4de7a.herokuapp.com"
+const baseUrl = "https://la-jeune-fermiere.onrender.com";
 
 const loginAdminUrl = `${baseUrl}/api/admins/loginAdmin`;
 const loginUserUrl = `${baseUrl}/api/user/loginUser`;
@@ -14,7 +14,7 @@ const createOrderUrl = `${baseUrl}/api/orders/createOrder`;
 const getOrderUrl = `${baseUrl}/api/orders/getOrder`;
 const updateStatusOrderUrl = `${baseUrl}/api/orders/updateOrder/status`;
 
-export{
+export {
   loginAdminUrl,
   loginUserUrl,
   getArticleUrl,
@@ -23,5 +23,5 @@ export{
   updateStatusOrderUrl,
   createArticleUrl,
   updateArticleUrl,
-  deleteArticleUrl
-}
+  deleteArticleUrl,
+};
