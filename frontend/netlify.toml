@@ -1,0 +1,29 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
+    Content-Security-Policy = "upgrade-insecure-requests"
+    Cross-Origin-Resource-Policy = "cross-origin"
+    Cross-Origin-Embedder-Policy = "require-corp"
+
+# Configuration spécifique pour l'API
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "http://46.202.131.189:3335"
+    Access-Control-Allow-Methods = "*"
+    Access-Control-Allow-Headers = "*"
+
+[[redirects]]
+  from = "/api/*"
+  to = "http://46.202.131.189:3335/:splat"
+  status = 200
+  force = true
